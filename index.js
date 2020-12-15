@@ -23,12 +23,13 @@ const showMe = auth => {
 const app = express();
 
 const podlet = new Podlet({
-    name: podletName, // required
-    version: '1.0.0', // required
-    pathname: '/', // required
-    manifest: '/manifest.json', // optional, defaults to '/manifest.json'
-    content: '/', // optional, defaults to '/'
-    development: true, // optional, defaults to false
+    name: podletName,
+    version: '1.0.0',
+    pathname: '/',
+    manifest: '/manifest.json',
+    content: '/',
+    development: true,
+    logger: console
 });
 
 app.use(podlet.middleware());
