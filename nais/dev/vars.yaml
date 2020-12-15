@@ -1,0 +1,6 @@
+app: podlet-vta-jobb
+namespace: paw
+team: paw
+ingressess: |
+  ingresses:
+    - https://arbeid.dev.nav.no/arbeid/podlet-vta-jobb
