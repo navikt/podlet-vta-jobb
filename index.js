@@ -3,7 +3,8 @@ const Podlet = require('@podium/podlet');
 const axios = require('axios')
 const { server } = require('./mocks/server.js')
 const { name: podletName } = require('./package.json')
-const { authUrl } = require('./config') 
+const { authUrl } = require('./config')
+const port = process.env.PORT || 7300
 
 const axiosInstance = axios.create({
   withCredentials: true
@@ -45,4 +46,4 @@ app.get(podlet.manifest(), (req, res) => {
 // isAlive/isReady route for Nais
 app.get(`/isAlive|isReady`, (req, res) => res.sendStatus(200));
 
-app.listen(7100);
+app.listen(port);
