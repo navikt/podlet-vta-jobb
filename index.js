@@ -35,9 +35,15 @@ const podlet = new Podlet({
 app.use(podlet.middleware());
 
 app.get(podlet.content(), async (req, res) => {
-  const { data: authData } = await axiosInstance(authUrl)
-  //const { data: oppfolgingData } = await axiosInstance(oppfolgingUrl)
-  return res.status(200).podiumSend(showMe(authData));
+  try {
+    const { data: authData } = await axiosInstance(authUrl)
+    //const { data: oppfolgingData } = await axiosInstance(oppfolgingUrl)
+    return res.status(200).podiumSend(showMe(authData));
+  } catch (error) {
+    console.error(error)
+    return res.status(200).podiumSend('<div>Jeg er her fordi noe har gått galt</div>');
+  }
+  
 });
 
 app.get(podlet.manifest(), (req, res) => {
