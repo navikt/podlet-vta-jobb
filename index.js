@@ -42,4 +42,7 @@ app.get(podlet.manifest(), (req, res) => {
   res.status(200).send(podlet);
 });
 
+// isAlive/isReady route for Nais
+app.get(`/isAlive|isReady`, (req, res) => res.sendStatus(200));
+
 app.listen(7100);
