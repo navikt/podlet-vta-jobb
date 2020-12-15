@@ -40,3 +40,4 @@ spec:
       external:
         - host: api.amplitude.com
         - host: pto-proxy.dev.nav.no
+        - host: innloggingsstatus.dev.nav.no
