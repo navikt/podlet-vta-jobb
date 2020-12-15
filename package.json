@@ -1,0 +1,29 @@
+{
+  "name": "podlet-vta-jobb",
+  "version": "1.0.0",
+  "description": "Podlet for veien til arbeid jobb blokk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navikt/podlet-vta-jobb.git"
+  },
+  "keywords": [],
+  "author": "Geir Gåsodden <geir.gasodden@pythonia.no> (https://github.com/zrrrzzt)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/navikt/podlet-vta-jobb/issues"
+  },
+  "homepage": "https://github.com/navikt/podlet-vta-jobb#readme",
+  "devDependencies": {
+    "msw": "0.24.2"
+  },
+  "dependencies": {
+    "@podium/podlet": "4.4.14",
+    "axios": "0.21.0",
+    "express": "4.17.1"
+  }
+}
