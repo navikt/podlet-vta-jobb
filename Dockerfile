@@ -2,11 +2,8 @@ FROM node:14-alpine AS runtime
 
 WORKDIR /usr/src/app
 
-ARG BASE_PATH
-ARG VERSION_HASH
 ENV PORT=7300 \
-    NODE_ENV=production \
-    VERSION_HASH=$VERSION_HASH
+    NODE_ENV=production
 
 COPY package*.json /usr/src/app/
 RUN npm ci

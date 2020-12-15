@@ -1,7 +1,6 @@
 const express = require('express');
 const Podlet = require('@podium/podlet');
 const axios = require('axios')
-const { server } = require('./mocks/server.js')
 const { name: podletName } = require('./package.json')
 const { authUrl } = require('./config')
 const port = process.env.PORT || 7300
@@ -11,6 +10,7 @@ const axiosInstance = axios.create({
 })
 
 if (process.env.NODE_ENV === 'development') {
+  const { server } = require('./mocks/server.js')
   server.listen()
 }
 
