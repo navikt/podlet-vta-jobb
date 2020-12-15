@@ -4,6 +4,7 @@ const axios = require('axios')
 const { name: podletName } = require('./package.json')
 const { authUrl } = require('./config')
 const port = process.env.PORT || 7300
+const podletVersion = process.env.VERSION_HASH || `${new Date().getTime()}`;
 
 const axiosInstance = axios.create({
   withCredentials: true
@@ -24,7 +25,7 @@ const app = express();
 
 const podlet = new Podlet({
     name: podletName,
-    version: '1.0.0',
+    version: podletVersion,
     pathname: '/',
     manifest: '/manifest.json',
     content: '/',
