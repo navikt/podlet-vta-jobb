@@ -1,5 +1,4 @@
 import * as React from "react";
-import "./lenkepanel-med-ikon.less";
 import { Normaltekst, Undertittel } from "nav-frontend-typografi";
 import LenkepanelBase from "nav-frontend-lenkepanel";
 

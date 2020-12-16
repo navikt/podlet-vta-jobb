@@ -1,0 +1,63 @@
+@import '../../node_modules/nav-frontend-core/less/_variabler';
+
+@tablet-width: 760px;
+@desktop-width: 958px;
+
+body {
+    background-color: @navLysGra;
+}
+
+.rad {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.limit {
+    margin: 0;
+    padding: 0;
+}
+.ressurslenker__heading {
+  text-align: left;
+}
+
+.lenkepanel__innhold {
+  padding: 0.5rem 0.5rem 0.5rem 0rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.lenkepanel__ikon {
+  margin-right: 1rem;
+}
+
+@media (min-width: @screen-sm-min) {
+    .limit {
+        max-width: @tablet-width;
+        margin: 0 auto;
+    }
+
+    .tokol {
+        display: flex;
+        justify-content: space-between;
+    }
+    .lenkepanel__innhold {
+      padding: 0.5rem 1rem 0.5rem 0.5rem;
+  }
+
+  .lenkepanel__ikon {
+      margin-right: 1rem;
+  }
+
+  .tokol {
+      .lenkepanel {
+          width: ~'calc(50% - 0.5rem)';
+      }
+  }
+}
+
+@media (min-width: @screen-md-min) {
+    .limit {
+        max-width: @desktop-width;
+    }
+}

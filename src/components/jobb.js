@@ -1,4 +1,6 @@
 import React from "react";
+import "./jobb.less";
+import Rad from "./rad";
 import { Systemtittel } from "nav-frontend-typografi";
 import CV from "./cv";
 import Stillinger from "./stillinger";
@@ -21,18 +23,20 @@ function Jobb(props) {
   if (!kanViseKomponent()) return null;
 
   return (
-    <section className="ressurslenker">
-      <Systemtittel tag="h2" className="ressurslenker__heading blokk-s">
-        Når du søker jobb
-      </Systemtittel>
-      <div className="tokol">
-        <Stillinger />
-        <CV />
-      </div>
-      <div className="tokol">
-        <Tips />
-      </div>
-    </section>
+    <Rad>
+      <section className="ressurslenker">
+        <Systemtittel tag="h2" className="ressurslenker__heading blokk-s">
+          Når du søker jobb
+        </Systemtittel>
+        <div className="tokol">
+          <Stillinger />
+          <CV />
+        </div>
+        <div className="tokol">
+          <Tips />
+        </div>
+      </section>
+    </Rad>
   );
 }
 
