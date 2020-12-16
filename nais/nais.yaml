@@ -10,12 +10,12 @@ spec:
   image: {{image}}
   port: 7300
   liveness:
-    path: /isAlive
+    path: {{base_path}}/isAlive
     timeout: 1
     periodSeconds: 5
     failureThreshold: 10
   readiness:
-    path: /isReady
+    path: {{base_path}}/isReady
     timeout: 1
   prometheus:
     enabled: false
@@ -34,10 +34,9 @@ spec:
   sessionAffinity: ClientIP # Sticky Session for ingress controller to prevent 404 on rollout
   env:
     - name: NEXT_PUBLIC_API_URL
-      value: /api
+      value: {{base_path}}/api
   accessPolicy:
     outbound:
       external:
         - host: api.amplitude.com
         - host: pto-proxy.dev.nav.no
-        - host: innloggingsstatus.dev.nav.no
