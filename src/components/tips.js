@@ -9,9 +9,7 @@ const Jobbsokertips = () => {
 
   const URL = harJobbbsokerbesvarelse ? jobbsokerkompetanseUrl : veiviserarbeidssokerUrl;
 
-  const lenketekst = harJobbbsokerbesvarelse
-    ? "jobbsokertips-overskrift-har-besvarelse"
-    : "jobbsokertips-overskrift-har-ikke-besvarelse";
+  const lenketekst = harJobbbsokerbesvarelse ? "Dine jobbsøkertips" : "Få jobbsøkertips";
 
   return (
     <LenkepanelMedIkon href={URL} alt="" overskrift={lenketekst}>

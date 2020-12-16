@@ -5,7 +5,7 @@ import { stillingLenke } from "../config";
 
 const StillingSok = () => {
   return (
-    <LenkepanelMedIkon href={stillingLenke} alt="" overskrift="stillingsok-overskrift">
+    <LenkepanelMedIkon href={stillingLenke} alt="" overskrift="Finn ledige stillinger">
       <StillingsokIkon />
     </LenkepanelMedIkon>
   );
