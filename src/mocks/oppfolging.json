@@ -1,3 +1,11 @@
 {
-  "erBrukerUnderOppfolging": true
+  "reservasjonKRR": false,
+  "underOppfolging": true,
+  "kanReaktiveres": false,
+  "inaktiveringsdato": null,
+  "erSykmeldtMedArbeidsgiver": false,
+  "servicegruppe": "BKART",
+  "formidlingsgruppe": "ARBS",
+  "rettighetsgruppe": "IYT",
+  "erIkkeArbeidssokerUtenOppfolging": false
 }
