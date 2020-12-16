@@ -1,5 +1,8 @@
 import React from "react";
-import { Sidetittel } from "nav-frontend-typografi";
+import { Systemtittel } from "nav-frontend-typografi";
+import CV from "./cv";
+import Stillinger from "./stillinger";
+import Tips from "./tips";
 
 function Jobb(props) {
   const { oppfolging, underOppfolging } = props;
@@ -17,7 +20,20 @@ function Jobb(props) {
 
   if (!kanViseKomponent()) return null;
 
-  return <Sidetittel>Her kommer det masse jobbers</Sidetittel>;
+  return (
+    <section className="ressurslenker">
+      <Systemtittel tag="h2" className="ressurslenker__heading blokk-s">
+        Når du søker jobb
+      </Systemtittel>
+      <div className="tokol">
+        <Stillinger />
+        <CV />
+      </div>
+      <div className="tokol">
+        <Tips />
+      </div>
+    </section>
+  );
 }
 
 export default Jobb;

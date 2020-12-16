@@ -24,3 +24,7 @@ const AUTH_URL = {
 export const underOppfolgingUrl = UNDER_OPPFOLGING_URL[getEnvironment()];
 export const oppfolgingUrl = OPPFOLGING_URL[getEnvironment()];
 export const authUrl = AUTH_URL[getEnvironment()];
+export const cvUrl = "https://arbeidsplassen.nav.no/cv";
+export const jobbsokerkompetanseUrl = "https://arbeidsplassen.nav.no/cv";
+export const veiviserarbeidssokerUrl = "https://arbeidsplassen.nav.no/cv";
+export const stillingLenke = "https://arbeidsplassen.nav.no/cv";
