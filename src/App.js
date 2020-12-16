@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div className="podlet-vta-jobb">
+      Kan du se meg?
       <Jobb oppfolging={oppfolging} />
     </div>
   );
