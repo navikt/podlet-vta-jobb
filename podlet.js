@@ -40,6 +40,11 @@ podlet.proxy({
   target: "https://pto-proxy.dev.nav.no/proxy/veilarboppfolging/api/oppfolging",
 });
 
+podlet.proxy({
+  name: "api-besvarelse",
+  target: "https://pto-proxy.dev.nav.no/proxy/veilarbjobbsokerkompetanse/api/hent",
+});
+
 app.get(`${basePath}${podlet.content()}`, (req, res) => {
   const { mountOrigin, publicPathname } = res.locals.podium.context;
   const url = new URL(publicPathname, mountOrigin);
