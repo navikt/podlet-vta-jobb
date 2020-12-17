@@ -7,7 +7,7 @@ import Stillinger from "./stillinger";
 import Tips from "./tips";
 
 function Jobb(props) {
-  const { oppfolging, underOppfolging } = props;
+  const { oppfolging, underOppfolging, besvarelse } = props;
 
   const kanViseKomponent = () => {
     let kanVise = false;
@@ -33,7 +33,7 @@ function Jobb(props) {
           <CV />
         </div>
         <div className="tokol">
-          <Tips />
+          <Tips besvarelse={besvarelse} />
         </div>
       </section>
     </Rad>
