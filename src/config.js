@@ -13,7 +13,7 @@ const AUTH_URL = {
 
 const BESVARELSE_URL = {
   development: "https://api.nav.no/vta-api/jobbsokerbesvarelse",
-  production: "/person/layout-dittnav/podium-resource/podlet-vta-situasjon/api-besvarelse",
+  production: "/person/layout-dittnav/podium-resource/podlet-vta-jobb/api-besvarelse",
 };
 
 const OPPFOLGING_URL = {
