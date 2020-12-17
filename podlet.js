@@ -36,13 +36,13 @@ app.use(`${basePath}/static`, express.static("./build/static"));
 app.use(`${basePath}/assets`, express.static("./build/"));
 
 podlet.proxy({
-  name: "api-oppfolging",
-  target: "https://pto-proxy.dev.nav.no/proxy/veilarboppfolging/api/oppfolging",
+  name: "api-besvarelse",
+  target: "https://pto-proxy.dev.nav.no/proxy/veilarbjobbsokerkompetanse/api/hent",
 });
 
 podlet.proxy({
-  name: "api-besvarelse",
-  target: "https://pto-proxy.dev.nav.no/proxy/veilarbjobbsokerkompetanse/api/hent",
+  name: "api-oppfolging",
+  target: "https://pto-proxy.dev.nav.no/proxy/veilarboppfolging/api/oppfolging",
 });
 
 app.get(`${basePath}${podlet.content()}`, (req, res) => {
