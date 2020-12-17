@@ -39,7 +39,7 @@ spec:
     outbound:
       rules:
         - application: pto-proxy
-        namespace: pto
+          namespace: pto
       external:
         - host: api.amplitude.com
         - host: innloggingsstatus.dev.nav.no
