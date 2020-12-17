@@ -18,7 +18,7 @@ const BESVARELSE_URL = {
 
 const OPPFOLGING_URL = {
   development: "https://api.nav.no/vta-api/oppfolging",
-  production: "/person/layout-dittnav/podium-resource/podlet-vta-situasjon/api-oppfolging",
+  production: "/person/layout-dittnav/podium-resource/podlet-vta-jobb/api-oppfolging",
 };
 
 const UNDER_OPPFOLGING_URL = {
