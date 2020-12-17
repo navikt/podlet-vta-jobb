@@ -37,12 +37,12 @@ app.use(`${basePath}/assets`, express.static("./build/"));
 
 podlet.proxy({
   name: "api-besvarelse",
-  target: "http://pto-proxy.pto.svc.nais.local/proxy/veilarbjobbsokerkompetanse/api/hent",
+  target: "https://pto-proxy.dev.intern.nav.no/proxy/veilarbjobbsokerkompetanse/api/hent",
 });
 
 podlet.proxy({
   name: "api-oppfolging",
-  target: "http://pto-proxy.pto.svc.nais.local/proxy/veilarboppfolging/api/oppfolging",
+  target: "https://pto-proxy.dev.intern.nav.no/proxy/veilarboppfolging/api/oppfolging",
 });
 
 app.get(`${basePath}${podlet.content()}`, (req, res) => {
