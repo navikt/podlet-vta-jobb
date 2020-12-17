@@ -41,3 +41,4 @@ spec:
         - host: api.amplitude.com
         - host: pto-proxy.dev.nav.no
         - host: innloggingsstatus.dev.nav.no
+        - host: pto-proxy.pto.svc.nais.local
