@@ -16,7 +16,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById("podlet-vta-situasjon")
+  document.getElementById("podlet-vta-jobb")
 );
 
 // If you want to start measuring performance in your app, pass a function
