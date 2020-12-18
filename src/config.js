@@ -21,15 +21,21 @@ const OPPFOLGING_URL = {
   production: "/person/layout-dittnav/podium-resource/podlet-vta-jobb/api-oppfolging",
 };
 
+const REGISTRERING_URL = {
+  development: "https://api.nav.no/vta-api/registrering",
+  production: "/person/layout-dittnav/podium-resource/podlet-vta-jobb/api-registrering",
+};
+
 const UNDER_OPPFOLGING_URL = {
   development: "https://api.nav.no/dittnav-api/oppfolging",
   production: "https://www.dev.nav.no/person/dittnav-api/oppfolging",
 };
 
-export const underOppfolgingUrl = UNDER_OPPFOLGING_URL[getEnvironment()];
-export const oppfolgingUrl = OPPFOLGING_URL[getEnvironment()];
 export const authUrl = AUTH_URL[getEnvironment()];
 export const besvarelseUrl = BESVARELSE_URL[getEnvironment()];
+export const oppfolgingUrl = OPPFOLGING_URL[getEnvironment()];
+export const registreringUrl = REGISTRERING_URL[getEnvironment()];
+export const underOppfolgingUrl = UNDER_OPPFOLGING_URL[getEnvironment()];
 export const cvUrl = "https://arbeidsplassen.nav.no/cv";
 export const jobbsokerkompetanseUrl = "https://jobbsokerkompetanse.nav.no/";
 export const veiviserarbeidssokerUrl = "https://veiviserarbeidssoker.nav.no";
