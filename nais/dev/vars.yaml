@@ -2,6 +2,7 @@ app: podlet-vta-jobb
 namespace: paw
 team: paw
 base_path: "/arbeid/podlet-vta-jobb"
+ptoProxyUrl: https://pto-proxy.dev.intern.nav.no
 ingressess: |
   ingresses:
     - https://arbeid.dev.nav.no/arbeid/podlet-vta-jobb

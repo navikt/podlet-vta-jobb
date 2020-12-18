@@ -3,7 +3,6 @@ import underOppfolging from "./under-oppfolging.json";
 import oppfolging from "./oppfolging.json";
 import auth from "./auth.json";
 import jobbsokerbesvarelse from "./jobbsokerbesvarelse.json";
-import registrering from "./registrering.json";
 
 export const handlers = [
   get("https://api.nav.no/dittnav-api/oppfolging", underOppfolging),
@@ -11,5 +10,4 @@ export const handlers = [
   get("https://api.nav.no/vta-api/jobbsokerbesvarelse", jobbsokerbesvarelse),
   get("https://api.nav.no/innloggingsstatus/auth", auth),
   get("https://api.nav.no/innloggingsstatus/auth", auth),
-  get("https://api.nav.no/vta-api/registrering", registrering),
 ];
