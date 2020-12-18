@@ -3,6 +3,9 @@ const Podlet = require("@podium/podlet");
 const fs = require("fs");
 const { name: podletName } = require("./package.json");
 
+const promClient = require("prom-client");
+const PrometheusConsumer = require("@metrics/prometheus-consumer");
+
 const basePath = process.env.BASE_PATH || "/arbeid/podlet-vta-jobb";
 const port = process.env.PORT || 7300;
 const podletVersion = process.env.VERSION_HASH || `${new Date().getTime()}`;
@@ -66,8 +69,18 @@ app.get(`${basePath}${podlet.manifest()}`, (req, res) => {
 // isAlive/isReady route for Nais
 app.get(`${basePath}/isAlive|isReady`, (req, res) => res.sendStatus(200));
 
-//start the app at port
+// Set up prometheus client with podium metrics
+const metricsConsumer = new PrometheusConsumer({ client: promClient });
+promClient.collectDefaultMetrics({ register: metricsConsumer.registry });
+metricsConsumer.on("error", (err) => console.error(err));
+podlet.metrics.pipe(metricsConsumer);
 
+app.get("/metrics", async function (req, res) {
+  const metrics = await metricsConsumer.metrics();
+  res.set("Content-Type", metricsConsumer.contentType()).send(metrics);
+});
+
+//start the app at port
 console.log(JSON.stringify(podlet, undefined, 2));
 console.log(`Content path ${podlet.content()}`);
 console.log(`Manifest path ${podlet.manifest()}`);
