@@ -18,7 +18,7 @@
     "@craco/craco": "6.0.0",
     "@metrics/prometheus-consumer": "3.0.1",
     "@podium/podlet": "4.4.14",
-    "@sentry/browser": "5.29.2",
+    "@sentry/browser": "6.0.1",
     "classnames": "2.2.6",
     "craco-less": "1.17.1",
     "express": "4.17.1",
@@ -36,12 +36,12 @@
     "nav-frontend-paneler-style": "0.3.31",
     "nav-frontend-typografi": "2.0.37",
     "nav-frontend-typografi-style": "1.0.31",
-    "prom-client": "13.0.0",
+    "prom-client": "13.1.0",
     "prop-types": "15.7.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "swr": "0.4.0",
-    "web-vitals": "1.0.1"
+    "web-vitals": "1.1.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "5.11.8",
