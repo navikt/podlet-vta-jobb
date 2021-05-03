@@ -5,7 +5,7 @@ import { cvUrl } from "../config";
 
 const CV = () => {
   return (
-    <LenkepanelMedIkon href={cvUrl} alt="" overskrift="Din CV og jobbprofil">
+    <LenkepanelMedIkon href={cvUrl} alt="" overskrift="Din CV og jobbønsker">
       <CvIkon />
     </LenkepanelMedIkon>
   );
