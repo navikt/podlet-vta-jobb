@@ -26,7 +26,7 @@ describe("tester Jobb komponenten", () => {
       erBrukerUnderOppfolging: true,
     };
     render(<Jobb underOppfolging={underOppfolging} />);
-    expect(screen.getByText(/din cv og jobbprofil/i)).toBeInTheDocument();
+    expect(screen.getByText(/din cv og jobbønsker/i)).toBeInTheDocument();
   });
 
   test("komponenten VISES om man er under oppfølging nivå 4", () => {
@@ -34,7 +34,7 @@ describe("tester Jobb komponenten", () => {
       underOppfolging: true,
     };
     render(<Jobb oppfolging={oppfolging} />);
-    expect(screen.getByText(/din cv og jobbprofil/i)).toBeInTheDocument();
+    expect(screen.getByText(/din cv og jobbønsker/i)).toBeInTheDocument();
   });
 
   test("komponenten vises IKKE om ER under oppfølging og sykmeldt med arbeidsgiver", () => {
